@@ -24,6 +24,12 @@ Button(graphic, text="8").grid(row=4, column=1)
 Button(graphic, text="9").grid(row=4, column=2)
 
 # row five
-Button(graphic, text="0").grid(row=5, column=0)
+Button(graphic, text="0").grid(row=5, column=1)
+
+
+# other buttons
+
+Button(graphic, text="AC").grid(row=5, column=2)
+Button(graphic, text="%").grid(row=5, column=0)
 
 graphic.mainloop()
