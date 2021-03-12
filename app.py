@@ -37,7 +37,7 @@ Button(graphic, text="EXP").grid(row=3, column=4, sticky=W+E)
 Button(graphic, text="^2").grid(row=3, column=5, sticky=W+E)
 Button(graphic, text="(").grid(row=4, column=4, sticky=W+E)
 Button(graphic, text=")").grid(row=4, column=5, sticky=W+E)
-Button(graphic, text="=").grid(row=5, column=4, sticky=W+E, columnspan=2,)
+Button(graphic, text="=").grid(row=5, column=4, sticky=W+E, columnspan=2)
 
 # operation buttons
 Button(graphic, text="+").grid(row=2, column=3, sticky=W+E)
