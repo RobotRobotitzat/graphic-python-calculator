@@ -33,6 +33,9 @@ Button(graphic, text="AC").grid(row=5, column=2)
 Button(graphic, text="%").grid(row=5, column=0)
 
 # operation buttons
-Button(graphic, text="").grid(row=, column=)
+Button(graphic, text="+").grid(row=, column=)
+Button(graphic, text="-").grid(row=, column=)
+Button(graphic, text="*").grid(row=, column=)
+Button(graphic, text="/").grid(row=, column=)
 
 graphic.mainloop()
