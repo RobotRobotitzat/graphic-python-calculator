@@ -6,7 +6,7 @@ graphic.title("Calculator")
 display = Entry(graphic)
 display.grid(row=1, columnspan=6, sticky=W+E)
 
-# number buttons
+# grapic code
 
 # number buttons row one 
 Button(graphic, text="1").grid(row=2, column=0, sticky=W+E)
@@ -45,4 +45,14 @@ Button(graphic, text="-").grid(row=3, column=3, sticky=W+E)
 Button(graphic, text="*").grid(row=4, column=3, sticky=W+E)
 Button(graphic, text="/").grid(row=5, column=3, sticky=W+E)
 
+
+# code
+index = 0
+
+def get_numbers(n):
+    display.insert(i, n)
+    index +=1
+
+
+# mainloop
 graphic.mainloop()
