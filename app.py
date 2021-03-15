@@ -30,30 +30,37 @@ Button(graphic, text="0", command=lambda:get_numbers("0")).grid(row=5, column=1,
 # other buttons
 
 Button(graphic, text="AC").grid(row=5, column=2, sticky=W+E)
-Button(graphic, text="%").grid(row=5, column=0, sticky=W+E)
+Button(graphic, text="%", command=lambda:get_operations("%")).grid(row=5, column=0, sticky=W+E)
 
 Button(graphic, text="←").grid(row=2, column=4, sticky=W+E, columnspan=2)
-Button(graphic, text="EXP").grid(row=3, column=4, sticky=W+E)
-Button(graphic, text="^2").grid(row=3, column=5, sticky=W+E)
-Button(graphic, text="(").grid(row=4, column=4, sticky=W+E)
-Button(graphic, text=")").grid(row=4, column=5, sticky=W+E)
+Button(graphic, text="EXP", command=lambda:get_operations("**")).grid(row=3, column=4, sticky=W+E)
+Button(graphic, text="^2", command=lambda:get_operations("**2")).grid(row=3, column=5, sticky=W+E)
+Button(graphic, text="(", command=lambda:get_operations("(")).grid(row=4, column=4, sticky=W+E)
+Button(graphic, text=")", command=lambda:get_operations(")")).grid(row=4, column=5, sticky=W+E)
 Button(graphic, text="=").grid(row=5, column=4, sticky=W+E, columnspan=2)
 
 # operation buttons
-Button(graphic, text="+").grid(row=2, column=3, sticky=W+E)
-Button(graphic, text="-").grid(row=3, column=3, sticky=W+E)
-Button(graphic, text="*").grid(row=4, column=3, sticky=W+E)
-Button(graphic, text="/").grid(row=5, column=3, sticky=W+E)
+Button(graphic, text="+", command=lambda:get_operations("+")).grid(row=2, column=3, sticky=W+E)
+Button(graphic, text="-", command=lambda:get_operations("-")).grid(row=3, column=3, sticky=W+E)
+Button(graphic, text="*", command=lambda:get_operations("*")).grid(row=4, column=3, sticky=W+E)
+Button(graphic, text="/", command=lambda:get_operations("/")).grid(row=5, column=3, sticky=W+E)
 
 
 # code
 index = 0
 
+# numbers commands
 def get_numbers(n):
     global index
     display.insert(index, n)
     index +=1
 
+# operations command
+def get_operations(operator):
+    global index
+    operator_len = len(operator)
+    display.insert(index, operator)
+    index+=operator_len
 
 # mainloop
 graphic.mainloop()
