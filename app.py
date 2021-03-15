@@ -29,7 +29,7 @@ Button(graphic, text="0", command=lambda:get_numbers("0")).grid(row=5, column=1,
 
 # other buttons
 
-Button(graphic, text="AC").grid(row=5, column=2, sticky=W+E)
+Button(graphic, text="AC", command=lambda:clear_calculator()).grid(row=5, column=2, sticky=W+E)
 Button(graphic, text="%", command=lambda:get_operations("%")).grid(row=5, column=0, sticky=W+E)
 
 Button(graphic, text="←").grid(row=2, column=4, sticky=W+E, columnspan=2)
@@ -61,6 +61,10 @@ def get_operations(operator):
     operator_len = len(operator)
     display.insert(index, operator)
     index+=operator_len
+
+# clear
+def clear_calculator():
+    display.delete(0, END)
 
 # mainloop
 graphic.mainloop()
