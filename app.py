@@ -32,7 +32,7 @@ Button(graphic, text="0", command=lambda:get_numbers("0")).grid(row=5, column=1,
 Button(graphic, text="AC", command=lambda:clear_calculator()).grid(row=5, column=2, sticky=W+E)
 Button(graphic, text="%", command=lambda:get_operations("%")).grid(row=5, column=0, sticky=W+E)
 
-Button(graphic, text="←").grid(row=2, column=4, sticky=W+E, columnspan=2)
+Button(graphic, text="←", command=lambda:undo()).grid(row=2, column=4, sticky=W+E, columnspan=2)
 Button(graphic, text="EXP", command=lambda:get_operations("**")).grid(row=3, column=4, sticky=W+E)
 Button(graphic, text="^2", command=lambda:get_operations("**2")).grid(row=3, column=5, sticky=W+E)
 Button(graphic, text="(", command=lambda:get_operations("(")).grid(row=4, column=4, sticky=W+E)
@@ -65,6 +65,17 @@ def get_operations(operator):
 # clear
 def clear_calculator():
     display.delete(0, END)
+
+# undo
+def undo():
+    display_status = display.get()
+    if len(display_status):
+        display_status_new = display_status[:-1]
+        clear_calculator()
+        display.insert(0, display_status_new)
+    else:
+        clear_calculator()
+        display.insert(0, "ERROR")
 
 # mainloop
 graphic.mainloop()
