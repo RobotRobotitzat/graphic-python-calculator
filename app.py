@@ -1,4 +1,5 @@
 from tkinter import *
+import parser
 
 graphic = Tk()
 graphic.title("Calculator")
@@ -37,7 +38,7 @@ Button(graphic, text="EXP", command=lambda:get_operations("**")).grid(row=3, col
 Button(graphic, text="^2", command=lambda:get_operations("**2")).grid(row=3, column=5, sticky=W+E)
 Button(graphic, text="(", command=lambda:get_operations("(")).grid(row=4, column=4, sticky=W+E)
 Button(graphic, text=")", command=lambda:get_operations(")")).grid(row=4, column=5, sticky=W+E)
-Button(graphic, text="=").grid(row=5, column=4, sticky=W+E, columnspan=2)
+Button(graphic, text="=", command=lambda:result()).grid(row=5, column=4, sticky=W+E, columnspan=2)
 
 # operation buttons
 Button(graphic, text="+", command=lambda:get_operations("+")).grid(row=2, column=3, sticky=W+E)
@@ -76,6 +77,18 @@ def undo():
     else:
         clear_calculator()
         display.insert(0, "ERROR")
+
+# result
+def result():
+    display_status = display.get()
+    try:
+        expression = parser.expr(display_status).compile()
+        result_operation = eval(expression)
+        clear_calculator()
+        display.insert(0, result_operation)
+    except expression as identifier:
+        clear_calculator()
+        display.insert(0, "Syntax ERROR")
 
 # mainloop
 graphic.mainloop()
