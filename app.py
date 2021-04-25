@@ -51,10 +51,15 @@ def result():
         clear_calculator()
         display.insert(0, "Syntax ERROR")
 
+
+
 # grapic code
 
 # colors
 graphic.configure(bg='#404040')
+
+# geometry
+graphic.geometry('300x200')
 
 # number buttons row one 
 Button(graphic, text="1", command=lambda:get_numbers("1")).grid(row=2, column=0, sticky=W+E)
