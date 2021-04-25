@@ -53,6 +53,9 @@ def result():
 
 # grapic code
 
+# colors
+graphic.configure(bg='#404040')
+
 # number buttons row one 
 Button(graphic, text="1", command=lambda:get_numbers("1")).grid(row=2, column=0, sticky=W+E)
 Button(graphic, text="2", command=lambda:get_numbers("2")).grid(row=2, column=1, sticky=W+E)
