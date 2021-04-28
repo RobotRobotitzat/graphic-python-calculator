@@ -1,2 +1,2 @@
 ## GRAPHIC CALCULATOR PYTHON
-### This is a basic calculator made with Python and Tkinter module of Python
+### This is a basic calculator made with Python and Tkinter module of Python3
