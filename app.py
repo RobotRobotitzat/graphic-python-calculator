@@ -56,7 +56,7 @@ def result():
 # grapic code
 
 # colors
-graphic.configure(bg='#404040')
+graphic.configure(bg='#302c2c')
 
 # geometry
 graphic.geometry('300x200')
