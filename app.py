@@ -59,7 +59,7 @@ def result():
 graphic.configure(bg='#302c2c')
 
 # geometry
-graphic.geometry('300x200')
+graphic.geometry('265x150')
 
 # number buttons row one 
 Button(graphic, text="1", bg='#404040', command=lambda:get_numbers("1")).grid(row=2, column=0, sticky=W+E)
