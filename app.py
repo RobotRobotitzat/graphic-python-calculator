@@ -62,7 +62,7 @@ graphic.configure(bg='#302c2c')
 graphic.geometry('265x150')
 
 # number buttons row one 
-Button(graphic, text="1", bg='#404040', command=lambda:get_numbers("1")).grid(row=2, column=0, sticky=W+E)
+Button(graphic, text="1", command=lambda:get_numbers("1")).grid(row=2, column=0, sticky=W+E)
 Button(graphic, text="2", command=lambda:get_numbers("2")).grid(row=2, column=1, sticky=W+E)
 Button(graphic, text="3", command=lambda:get_numbers("3")).grid(row=2, column=2, sticky=W+E)
 
