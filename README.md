@@ -1,4 +1,5 @@
-## GRAPHIC CALCULATOR PYTHON
-### This is a basic calculator made with Python and Tkinter module of Python
+## pycalk 
 
-#### anbecodes 
+![image-one](./public/image/image-one.png)
+![image-two](./public/image/image-two.png)
+![image-three](./public/image/image-three.png)
