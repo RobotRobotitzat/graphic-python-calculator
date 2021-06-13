@@ -1,8 +1,15 @@
+#!/usr/bin/python3
+
 from tkinter import *
 import parser
 
 graphic = Tk()
 graphic.title("Calculator")
+
+# icon = "./calculator-1.png"
+
+# graphic.iconbitmap(icon)
+# graphic.tk.call('wm', 'iconphoto', graphic._w, graphic.PhotoImage(file='calculator-1.png'))
 
 display = Entry(graphic)
 display.grid(row=1, columnspan=6, sticky=W+E)

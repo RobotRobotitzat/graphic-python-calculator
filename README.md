@@ -1,4 +1,4 @@
-## Graphic Python Calculator
+## pycalk 
 
 ![image-one](./public/image/image-one.png)
 ![image-two](./public/image/image-two.png)
